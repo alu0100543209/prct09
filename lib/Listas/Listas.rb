@@ -107,7 +107,9 @@ module Listas
           
       end
       
-      
+      def <=> (b)
+         [self.author, self.title, self.editorial , self.date] <=> [b.author, b.title, b.editorial,b.date]
+      end
       
       
       def to_s

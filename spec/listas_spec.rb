@@ -142,8 +142,27 @@ describe " Contendor Listas: " do
             expect(@bib.to_s).to eq("Dave Thomas, Andy Hunt, Chad Fowler\nProgramming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide\nPragamatic Book;(July 7, 2013)")
         end
         
+        it "Bibliografia  comparable equal 0 " do
+            expect(@bib <=> @bib2).to eq(0)
+        end
         
-       
+        it "Bibliografia comparable min 1" do
+            author=['Dave Thomas', 'Andy Hunt', 'Chad Fowler']
+            title="Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
+            editorial="Menor"
+            date="July 7, 2013"
+            bib3 = Listas::Bibliography.new(author, title, editorial,date)
+            expect(@bib <=> bib3).to eq(1)
+        end
+        
+        it "Bibliografia max -1" do
+            author=['Dave Thomas', 'Andy Hunt', 'Chad Fowler']
+            title="Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
+            editorial="Pragamatic Book Mayor"
+            date="July 7, 2013"
+            bib4 = Listas::Bibliography.new(author, title, editorial,date)
+            expect(@bib <=> bib4).to eq(-1)
+        end
         
         
     end
