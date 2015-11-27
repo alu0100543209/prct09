@@ -39,4 +39,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 5. Create a new Pull Request
 
 ## Travis
-https://travis-ci.org/alu0100543209/prct09.svg?branch=master
+
+[![Build Status](https://travis-ci.org/alu0100543209/prct09.svg?branch=master)](https://travis-ci.org/alu0100543209/prct09)

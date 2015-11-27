@@ -12,6 +12,17 @@ module Listas
         @longitud = 0
       end
      
+     
+      def each
+            temp = @head
+            counter = 0
+            while counter < longitud do
+                yield temp.value
+                temp = temp.next
+                counter += 1
+            end
+      end
+     
       def push(item)
          node = Node.new(item,nil,nil)
          if @head.nil?
@@ -129,7 +140,7 @@ module Listas
    
    class Enciclopedia < Bibliography
     attr_reader :serial, :volumen, :isbn
-    
+        include Comparable
          def initialize(author, title, editorial, volumen, date, isbn) 
             
             super(author, title, editorial, date)
@@ -150,6 +161,7 @@ module Listas
             @serial = serial
          end
         
+         
        
    end
    
