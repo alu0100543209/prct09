@@ -95,7 +95,7 @@ describe " Contendor Listas: " do
         
         it "Acepta una bibliografia" do
             authors=['Dave Thomas', 'Andy Hunt', 'Chad Fowler']
-            title="Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
+            title="Programming Ruby 1.9 & 2.0: The Pragmatic Programmers Guide"
             editorial="Pragamatic Book"
             date="July 7, 2013"
             @bib = Listas::Bibliography.new(title, authors, editorial, date)
@@ -159,7 +159,7 @@ describe " Contendor Listas: " do
             listaCheck.push(bib2)
             listaCheck.push(bib)
             listaCheck.push(bib3)
-            expect(listaCheck.max).to eq(bib3)
+            expect(listaCheck.min).to eq(bib3)
         end
         
         it "Comprobar que devuelve el maximo" do
